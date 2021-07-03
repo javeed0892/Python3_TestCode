@@ -1,0 +1,12 @@
+class Solution(object):
+    def longestCommonPrefix( strs):
+        if not strs:
+            return ""
+        small_char, largest_char = min(strs), max(strs)
+        for i, char in enumerate(small_char):
+            if char != largest_char[i]:
+                return small_char[:i] # x[start:end:st
+        return small_char
+strs = ["flower","flow","flight"]
+strings = Solution
+print(strings.longestCommonPrefix(strs))
